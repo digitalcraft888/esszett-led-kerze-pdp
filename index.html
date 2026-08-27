@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>LED-Kerze S · Esszett</title>
+<meta name="description" content="PTMD LED-Kerze S mit beweglicher 3D-Flamme, 6-Stunden-Timer und Echtwachs-Oberfläche. Das warme Flackern echter Kerzen – sicher, sauber und immer wieder verwendbar.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,600;0,700;0,800;0,900;1,700;1,800&family=Open+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Countdown -->
+<div class="topbar">
+  <span class="lbl"><b>Winter-Aktion</b> · −13&nbsp;% auf die LED-Kerze <span class="extra">· Gratis Versand ab 150&nbsp;€</span></span>
+  <span class="cd" id="cd" aria-label="Angebot endet in">
+    <span class="u" data-h>00</span><span class="s">:</span><span class="u" data-m>00</span><span class="s">:</span><span class="u" data-s>00</span>
+  </span>
+</div>
+
+<!-- Header -->
+<header class="site-header">
+  <div class="wrap">
+    <button class="menu-btn" id="menuBtn" aria-label="Menü öffnen"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 6h18M3 12h18M3 18h18"/></svg></button>
+    <a class="logo" href="#top" aria-label="Esszett Luxury"><img src="assets/img/logo-esszett.jpg" alt="Esszett Luxury"></a>
+    <nav class="nav">
+      <a href="#warum">Warum LED</a>
+      <a href="#vergleich">Vergleich</a>
+      <a href="#reviews">Bewertungen</a>
+      <a href="#story">Über uns</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <div class="header-right">
+      <span class="pill-rate"><span class="g">★</span> <b>4,65</b> <span class="txt">· 57 Bewertungen</span></span>
+      <button class="icon-btn" aria-label="Suchen"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg></button>
+      <button class="icon-btn" id="cartBtn" aria-label="Warenkorb"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg><span class="count" id="cartCount">0</span></button>
+    </div>
+  </div>
+</header>
+<div class="mobile-scrim" id="mScrim"></div>
+<aside class="mobile-drawer" id="mDrawer" aria-hidden="true">
+  <button class="close" id="mClose" aria-label="Menü schließen">×</button>
+  <nav>
+    <a href="#warum">Warum LED</a>
+    <a href="#vergleich">Vergleich</a>
+    <a href="#reviews">Bewertungen</a>
+    <a href="#story">Über uns</a>
+    <a href="#faq">FAQ</a>
+  </nav>
+  <span class="mrate"><span class="g">★</span> 4,65 · 57 verifizierte Bewertungen</span>
+</aside>
+
+<main class="wrap" id="top">
+  <nav class="crumbs"><a href="#">Startseite</a><span>/</span><a href="#">Beleuchtung</a><span>/</span><a href="#">LED-Kerzen</a><span>/</span>LED-Kerze S</nav>
+
+  <!-- ===== PRODUCT ===== -->
+  <section class="pdp">
+    <div class="gallery">
+      <div class="stage">
+        <div class="flags"><span class="flag sale">−13&nbsp;%</span><span class="flag"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.2l2.95 6.35 6.85.72-5.1 4.6 1.4 6.83L12 17.9l-6.1 2.8 1.4-6.83-5.1-4.6 6.85-.72z"/></svg>Bestseller</span></div>
+        <button class="navbtn prev" aria-label="Vorheriges Bild">‹</button>
+        <img id="stageImg" src="assets/img/g3.jpg" alt="PTMD LED-Kerzen in warmer Wohnzimmer-Szene">
+        <button class="navbtn next" aria-label="Nächstes Bild">›</button>
+      </div>
+      <div class="thumbs" id="thumbs">
+        <button aria-current="true" data-src="assets/img/g3.jpg"><img src="assets/img/g3.jpg" alt="Farbvarianten in Szene"></button>
+        <button data-src="assets/img/g5.jpg"><img src="assets/img/g5.jpg" alt="Weiße LED-Kerzen"></button>
+        <button data-src="assets/img/g1.jpg"><img src="assets/img/g1.jpg" alt="Bordeaux LED-Kerzen"></button>
+        <button data-src="assets/img/g4.jpg"><img src="assets/img/g4.jpg" alt="Schwarze LED-Kerzen mit Gold"></button>
+        <button data-src="assets/img/g12.jpg"><img src="assets/img/g12.jpg" alt="LED-Kerze Schwarz Detail"></button>
+        <button data-src="assets/img/g13.jpg"><img src="assets/img/g13.jpg" alt="LED-Kerze Silber Detail"></button>
+      </div>
+    </div>
+
+    <div class="buy">
+      <div class="socialproof">
+        <span class="avs"><img src="assets/img/cust-f.jpg" alt=""><img src="assets/img/cust-m.jpg" alt=""></span>
+        <span>Über <b>10.000+</b> zufriedene Kunden</span>
+      </div>
+      <div class="kick"><span class="brand">PTMD Collection</span><span class="dot"></span><span>SKU 701629</span><span class="dot"></span><span>Auf Lager</span></div>
+      <h1 class="p-title"><span class="hl">LED-Kerze S</span> mit beweglicher <span class="hl">Flamme</span> &amp; Timer</h1>
+
+      <div class="ratingline">
+        <span class="stars" style="--v:93%"><span class="fill"></span></span>
+        <b>4,65</b><a href="#reviews">57 verifizierte Bewertungen</a>
+      </div>
+
+      <p class="leadtext">Das warme, tanzende Flackern einer echten Kerze – ganz ohne Rauch, Wachsflecken oder offenes Feuer. Aus Echtwachs, mit beweglicher 3D-Flamme und 6-Stunden-Timer.</p>
+
+      <div class="chips">
+        <span class="chip"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2C8 6 8 9 12 12c4-3 4-6 0-10Z"/><path d="M12 12c-3 2-3 6 0 9 3-3 3-7 0-9Z"/></svg> Bewegliche 3D-Flamme</span>
+        <span class="chip"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg> 6-Stunden-Timer</span>
+        <span class="chip"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> Echtwachs</span>
+        <span class="chip"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2 4 5v6c0 5 8 9 8 9s8-4 8-9V5Z"/></svg> Flammenlos sicher</span>
+      </div>
+
+      <!-- Bundles -->
+      <div class="opt"><div class="lab"><span>Menge wählen &amp; sparen</span></div>
+        <div class="bundles" id="bundles">
+          <button class="bundle" aria-pressed="false" data-qty="1" data-unit="10,30">
+            <span class="radio"></span>
+            <span class="bmain"><span class="bt">1 × LED-Kerze S</span><span class="bs">Zum Ausprobieren</span></span>
+            <span class="bp"><span class="now">10,30&nbsp;€</span><br><span class="was">11,90&nbsp;€</span></span>
+          </button>
+          <button class="bundle" aria-pressed="true" data-qty="3" data-unit="9,20">
+            <span class="radio"></span>
+            <span class="bmain"><span class="bt">3er-Set <span class="tag best">Beliebt</span></span><span class="bs">Ideal als Trio auf einem Tablett · spare 11&nbsp;%</span></span>
+            <span class="bp"><span class="now">27,60&nbsp;€</span><br><span class="was">35,70&nbsp;€</span></span>
+          </button>
+          <button class="bundle" aria-pressed="false" data-qty="5" data-unit="8,60">
+            <span class="radio"></span>
+            <span class="bmain"><span class="bt">5er-Set <span class="tag">Bester Preis</span></span><span class="bs">Gratis Versand · spare 17&nbsp;%</span></span>
+            <span class="bp"><span class="now">43,00&nbsp;€</span><br><span class="was">59,50&nbsp;€</span></span>
+          </button>
+        </div>
+      </div>
+
+      <div class="opt"><div class="lab"><span>Größe</span><span class="val" id="sizeVal">S · 7,5 × 10&nbsp;cm</span></div>
+        <div class="sizes" id="sizes">
+          <button data-v="XS · 7 × 8 cm">XS</button>
+          <button aria-pressed="true" data-v="S · 7,5 × 10 cm">S</button>
+          <button data-v="M · 7,5 × 12,5 cm">M</button>
+          <button data-v="L · 10 × 15 cm">L</button>
+          <button data-v="XL · 10 × 20 cm">XL</button>
+          <button data-v="XXL · 15 × 20 cm">XXL</button>
+        </div>
+      </div>
+
+      <div class="opt"><div class="lab"><span>Farbe</span><span class="val" id="colorVal">Weiß</span></div>
+        <div class="swatches" id="swatches">
+          <button class="swatch" aria-pressed="true" data-c="Weiß" style="background:#F4F1EA" title="Weiß"></button>
+          <button class="swatch" data-c="Schwarz" style="background:#2A2622" title="Schwarz"></button>
+          <button class="swatch" data-c="Grau" style="background:#9A968F" title="Grau"></button>
+          <button class="swatch" data-c="Silber" style="background:#C7C7C2" title="Silber"></button>
+          <button class="swatch" data-c="Beige" style="background:#D9C9B0" title="Beige"></button>
+          <button class="swatch" data-c="Bordeaux" style="background:#7A2E3A" title="Bordeaux"></button>
+          <button class="swatch" data-c="Dunkelgrün" style="background:#3E4E3C" title="Dunkelgrün"></button>
+          <button class="swatch" data-c="Petrol" style="background:#2E5B60" title="Petrol"></button>
+          <button class="swatch" data-c="Rostbraun" style="background:#9A5A34" title="Rostbraun"></button>
+          <button class="swatch" data-c="Flieder" style="background:#B7A6C6" title="Flieder"></button>
+          <button class="swatch" data-c="Gold" style="background:linear-gradient(135deg,#E2C67C,#B4902F)" title="Gold"></button>
+        </div>
+      </div>
+
+      <div class="cart-row">
+        <div class="qty">
+          <button id="qtyMinus" aria-label="Menge verringern">−</button>
+          <input id="qty" type="number" value="1" min="1" max="99" aria-label="Anzahl Sets">
+          <button id="qtyPlus" aria-label="Menge erhöhen">+</button>
+        </div>
+        <button class="addcart" id="addCart">
+          <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.7 13.4a2 2 0 0 0 2 1.6h9.7a2 2 0 0 0 2-1.6L23 6H6"/></svg>
+          In den Warenkorb · <span class="amt" id="ctaAmt">27,60&nbsp;€</span>
+        </button>
+      </div>
+      <button class="paypal-btn" id="paypalBtn">
+        <span class="txt">Mit</span>
+        <span class="pp"><span class="a">Pay</span><span class="b">Pal</span></span>
+        <span class="txt">zahlen</span>
+      </button>
+      <p class="pp-alt">oder in Raten mit <b>Klarna</b></p>
+
+      <ul class="reassure">
+        <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12a9 9 0 1 0 9-9 9 9 0 0 0-8 5"/><path d="M3 3v5h5"/></svg><span><b>14 Tage Rückgaberecht</b> – gefällt sie nicht, Geld zurück.</span></li>
+        <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 7h13v10H3z"/><path d="M16 10h3l2 3v4h-5"/><circle cx="7.5" cy="17.5" r="1.5"/><circle cx="17.5" cy="17.5" r="1.5"/></svg><span><b>Schneller Versand</b> mit DHL, DPD &amp; GLS · versandfertig in 1–2 Werktagen.</span></li>
+        <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2 4 5v6c0 5 8 9 8 9s8-4 8-9V5Z"/><path d="m9 12 2 2 4-4"/></svg><span><b>Geprüfter Shop</b> · über 10.000 zufriedene Kunden &amp; Käuferschutz.</span></li>
+      </ul>
+
+      <div class="paylogos">
+        <span class="lead">Sicher &amp; geschützt bezahlen</span>
+        <span class="pay pp" title="PayPal"><span class="a">Pay</span><span class="b">Pal</span></span>
+        <span class="pay klarna" title="Klarna">Klarna</span>
+        <span class="pay visa" title="Visa">VISA</span>
+        <span class="pay mc" title="Mastercard"><i></i><i></i></span>
+        <span class="pay amex" title="American Express">AMEX</span>
+        <span class="pay apay" title="Apple Pay"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17 12.5c0-2 1.6-3 1.7-3.1-1-1.4-2.4-1.6-2.9-1.6-1.2-.1-2.4.7-3 .7s-1.6-.7-2.6-.7c-1.3 0-2.6.8-3.2 2-1.4 2.4-.4 6 1 8 .7 1 1.4 2 2.5 2 1 0 1.3-.6 2.5-.6s1.5.6 2.5.6 1.7-1 2.4-2c.5-.7.7-1.1 1-1.9-2.6-1-3-3.4-2.9-3.9ZM15 6.3c.5-.7.9-1.6.8-2.5-.8 0-1.7.5-2.3 1.2-.5.6-.9 1.5-.8 2.4.9.1 1.8-.4 2.3-1.1Z"/></svg>Pay</span>
+      </div>
+
+      <div class="advice">
+        <div class="av"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15l-1.3 4.8 4.9-1.3A10 10 0 1 0 12 2Zm5.5 14.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .1-1.6-.1-.4-.1-.9-.3-1.5-.5-2.6-1.1-4.3-3.7-4.4-3.9-.1-.2-1-1.4-1-2.6 0-1.2.6-1.8.9-2 .2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 1.9c.1.2.1.3 0 .5l-.4.6c-.2.2-.3.4-.1.7.2.3.8 1.3 1.7 2.1 1.2 1 2 1.4 2.3 1.5.2.1.4.1.5-.1l.7-.9c.2-.2.4-.2.6-.1l1.8.9c.3.1.4.2.5.3.1.2.1.7-.1 1.2Z"/></svg></div>
+        <div class="txt"><strong>Persönliche Beratung</strong><span>Fragen zum Artikel? Wir beraten dich gern.</span></div>
+        <a href="#">WhatsApp →</a>
+      </div>
+
+      <div class="acc">
+        <details open>
+          <summary>Produktbeschreibung <span class="chev"></span></summary>
+          <div class="acc-body">
+            <p>Die <b>PTMD LED-Kerze in Größe S</b> bringt das warme Flackern einer echten Kerze in dein Zuhause – ganz ohne Rauch, Wachsflecken oder offenes Feuer. Die bewegliche <b>3D-Flamme</b> tanzt täuschend echt und taucht Wohnzimmer, Fensterbank oder gedeckten Tisch in ein sanftes, warmweißes Licht.</p>
+            <p>Der aufwendig gearbeitete Korpus aus <b>Echtwachs</b> mit rustikaler Oberfläche fühlt sich an wie eine klassische Stumpenkerze. Dank <b>6-Stunden-Timer</b> schaltet sich die Kerze jeden Abend zur selben Zeit ein und nach sechs Stunden automatisch wieder aus.</p>
+          </div>
+        </details>
+        <details>
+          <summary>Garantiebedingungen <span class="chev"></span></summary>
+          <div class="acc-body">
+            <p>Auf die Elektronik deiner LED-Kerze gewähren wir <b>24 Monate Gewährleistung</b> ab Kaufdatum. Ausgenommen sind Batterien sowie Schäden durch unsachgemäßen Gebrauch, Feuchtigkeit oder Fallenlassen.</p>
+            <p>Im Garantiefall genügt eine kurze Nachricht mit Bestellnummer – wir kümmern uns umgehend um Ersatz oder Erstattung.</p>
+          </div>
+        </details>
+        <details>
+          <summary>Technische Details <span class="chev"></span></summary>
+          <div class="acc-body">
+            <dl class="spec">
+              <div><dt>Maße (Ø × H)</dt><dd>7,5 × 10&nbsp;cm</dd></div>
+              <div><dt>Material</dt><dd>Echtwachs</dd></div>
+              <div><dt>Lichtfarbe</dt><dd>Warmweiß</dd></div>
+              <div><dt>Flamme</dt><dd>bewegliche 3D-LED</dd></div>
+              <div><dt>Timer</dt><dd>6 Stunden täglich</dd></div>
+              <div><dt>Batterien</dt><dd>2 × AA (nicht inkl.)</dd></div>
+              <div><dt>Marke</dt><dd>PTMD Collection</dd></div>
+              <div><dt>SKU / EAN</dt><dd>701629 · …2801</dd></div>
+            </dl>
+          </div>
+        </details>
+        <details>
+          <summary>Herstellerinformation <span class="chev"></span></summary>
+          <div class="acc-body">
+            <p><b>PTMD Collection</b> steht seit Jahren für stimmungsvolles „Luxury Living“ – Wohnaccessoires und Dekoration mit Charakter, kuratiert und vertrieben in Deutschland durch <b>Esszett Luxury</b>.</p>
+            <p>Esszett GmbH · Berlin, Deutschland · office@esszett.eu</p>
+          </div>
+        </details>
+        <details>
+          <summary>Versand &amp; Retoure <span class="chev"></span></summary>
+          <div class="acc-body">
+            <p>Versand mit DHL, DPD &amp; GLS – versandfertig in 1–2 Werktagen, Lieferung innerhalb Deutschlands in 2–4 Werktagen. <b>Gratis Versand ab 150&nbsp;€</b>.</p>
+            <p>Du hast <b>14 Tage Rückgaberecht</b>: Gefällt dir die Kerze nicht, sende sie unkompliziert zurück – volle Erstattung.</p>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- Press / brands -->
+<div class="press">
+  <div class="wrap">
+    <span class="label">Kuratiert von Esszett · Marken, denen wir vertrauen</span>
+    <div class="brands">
+      <img src="assets/brands/ptmd.png" alt="PTMD">
+      <img src="assets/brands/riviera.png" alt="Rivièra Maison">
+      <img src="assets/brands/fink.png" alt="Fink Living">
+      <img src="assets/brands/maytoni.png" alt="Maytoni">
+      <img src="assets/brands/housenordic.webp" alt="House Nordic">
+      <img src="assets/brands/kooduu.webp" alt="Kooduu">
+      <img src="assets/brands/philippi.jpg" alt="Philippi">
+      <img src="assets/brands/sompex.jpg" alt="Sompex">
+    </div>
+  </div>
+</div>
+
+<!-- Guarantee trio -->
+<section class="section stone">
+  <div class="wrap">
+    <div class="trio">
+      <div class="gcard">
+        <div class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 2 4 5v6c0 5 8 9 8 9s8-4 8-9V5Z"/><path d="m9 12 2 2 4-4"/></svg></div>
+        <h3>14 Tage Rückgabe</h3>
+        <p>Überzeugt dich das Flackern nicht, sende die Kerze unkompliziert zurück – volle Erstattung, keine Fragen.</p>
+      </div>
+      <div class="gcard">
+        <div class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 7h13v10H3z"/><path d="M16 10h3l2 3v4h-5"/><circle cx="7.5" cy="17.5" r="1.5"/><circle cx="17.5" cy="17.5" r="1.5"/></svg></div>
+        <h3>Schneller Versand</h3>
+        <p>Versandfertig in 1–2 Werktagen mit DHL, DPD &amp; GLS. Gratis Versand ab 150&nbsp;€ innerhalb Deutschlands.</p>
+      </div>
+      <div class="gcard">
+        <div class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3 3 7v6c0 5 4 8 9 9 5-1 9-4 9-9V7Z"/><path d="M9 12h6M12 9v6"/></svg></div>
+        <h3>Geprüfte Qualität</h3>
+        <p>Echtwachs-Verarbeitung aus der PTMD Luxury-Living-Kollektion – langlebig statt Wegwerf, Saison für Saison.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Problem / solution -->
+<section class="section dark" id="warum">
+  <div class="wrap">
+    <div class="split">
+      <div class="fig"><img src="assets/img/g4.jpg" alt="Stimmungsvolle LED-Kerzen mit Goldakzenten"></div>
+      <div>
+        <p class="eyebrow">Echte Kerzen sind schön – bis sie es nicht sind</p>
+        <h2 class="display">Die Stimmung echter Kerzen. <em>Ohne</em> ihre Nachteile.</h2>
+        <ul class="xlist">
+          <li><span class="bad">✕</span><span>Offene Flamme, die neben Kindern, Haustieren und Vorhängen zum Risiko wird.</span></li>
+          <li><span class="bad">✕</span><span>Ruß, Rauch und Wachsflecken auf Tisch, Fensterbank und Textilien.</span></li>
+          <li><span class="bad">✕</span><span>Nach wenigen Stunden heruntergebrannt – und wieder Geld für Nachschub.</span></li>
+          <li><span class="good">✓</span><span><b>Die Esszett LED-Kerze</b> gibt dir dasselbe warme Flackern – sicher, sauber und jahrelang immer wieder.</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Anatomy -->
+<section class="section">
+  <div class="wrap">
+    <div class="shead">
+      <p class="eyebrow c">Bis ins Detail durchdacht</p>
+      <h2 class="display">Klein in der Größe, <em>groß</em> in der Stimmung</h2>
+    </div>
+    <div class="anatomy">
+      <div class="fig"><img src="assets/img/g12.jpg" alt="Nahaufnahme der beweglichen LED-Flamme und Echtwachs-Oberfläche"><div class="glow"></div></div>
+      <div class="feats">
+        <div class="feat"><span class="no">01</span><div><h3>Bewegliche 3D-Flamme</h3><p>Ein pendelnder Docht erzeugt ein täuschend echtes Flackern – der Aha-Moment, den Gäste sofort bemerken.</p></div></div>
+        <div class="feat"><span class="no">02</span><div><h3>Warmweißes LED-Licht</h3><p>Sanftes, goldenes Licht wie echtes Kerzenlicht. Kein grelles Weiß, kein kaltes Blau – nur Gemütlichkeit.</p></div></div>
+        <div class="feat"><span class="no">03</span><div><h3>Echtwachs-Oberfläche</h3><p>Rustikal strukturiertes Wachs, das sich anfühlt und aussieht wie eine klassische Stumpenkerze.</p></div></div>
+        <div class="feat"><span class="no">04</span><div><h3>Täglicher 6-Stunden-Timer</h3><p>Einmal einschalten – die Kerze wiederholt ihren Rhythmus jeden Abend automatisch, ganz von selbst.</p></div></div>
+        <div class="feat"><span class="no">05</span><div><h3>Batteriebetrieben &amp; sicher</h3><p>2 × AA genügen. Keine offene Flamme, kein Ruß – bedenkenlos auch über Nacht.</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Stats -->
+<section class="section dark">
+  <div class="wrap">
+    <div class="shead">
+      <p class="eyebrow c">Was unsere Kunden sagen</p>
+      <h2 class="display">Zahlen, die für sich <em>sprechen</em></h2>
+    </div>
+    <div class="stats" id="stats">
+      <div class="stat"><div class="ring" data-pct="96"><svg width="120" height="120"><circle cx="60" cy="60" r="52" fill="none" stroke="rgba(255,255,255,.1)" stroke-width="8"/><circle class="arc" cx="60" cy="60" r="52" fill="none" stroke="#E2C67C" stroke-width="8" stroke-linecap="round" stroke-dasharray="327" stroke-dashoffset="327"/></svg><span class="num">0%</span></div><p>halten sie kaum von einer echten Kerze unterscheidbar</p></div>
+      <div class="stat"><div class="ring" data-pct="94"><svg width="120" height="120"><circle cx="60" cy="60" r="52" fill="none" stroke="rgba(255,255,255,.1)" stroke-width="8"/><circle class="arc" cx="60" cy="60" r="52" fill="none" stroke="#E2C67C" stroke-width="8" stroke-linecap="round" stroke-dasharray="327" stroke-dashoffset="327"/></svg><span class="num">0%</span></div><p>würden Esszett Freunden weiterempfehlen</p></div>
+      <div class="stat"><div class="ring" data-pct="89"><svg width="120" height="120"><circle cx="60" cy="60" r="52" fill="none" stroke="rgba(255,255,255,.1)" stroke-width="8"/><circle class="arc" cx="60" cy="60" r="52" fill="none" stroke="#E2C67C" stroke-width="8" stroke-linecap="round" stroke-dasharray="327" stroke-dashoffset="327"/></svg><span class="num">0%</span></div><p>nutzen die Timer-Funktion (fast) jeden Abend</p></div>
+      <div class="stat"><div class="ring" data-pct="100"><svg width="120" height="120"><circle cx="60" cy="60" r="52" fill="none" stroke="rgba(255,255,255,.1)" stroke-width="8"/><circle class="arc" cx="60" cy="60" r="52" fill="none" stroke="#E2C67C" stroke-width="8" stroke-linecap="round" stroke-dasharray="327" stroke-dashoffset="327"/></svg><span class="num">0%</span></div><p>flammenlose Sicherheit – ohne Ruß, Rauch oder Wachs</p></div>
+    </div>
+    <p class="statsnote">Aus 57 verifizierten Bewertungen und einer Befragung unter Esszett-Kund:innen.</p>
+  </div>
+</section>
+
+<!-- Moments -->
+<section class="section">
+  <div class="wrap">
+    <div class="shead">
+      <p class="eyebrow c">Für jeden Moment</p>
+      <h2 class="display">Wo sie dein Zuhause <em>wärmer</em> macht</h2>
+    </div>
+    <div class="moments">
+      <div class="moment"><img src="assets/img/g5.jpg" alt="Weiße LED-Kerzen als Tischdeko"><div class="cap"><b>Der gedeckte Tisch</b><span>Stimmung für jedes Abendessen</span></div></div>
+      <div class="moment"><img src="assets/img/g3.jpg" alt="Warme Farbtöne im Wohnzimmer"><div class="cap"><b>Das Wohnzimmer</b><span>Gemütliche Abende auf dem Sofa</span></div></div>
+      <div class="moment"><img src="assets/img/g1.jpg" alt="Bordeaux LED-Kerzen auf Tablett"><div class="cap"><b>Die Fensterbank</b><span>Ein warmer Blickfang von außen</span></div></div>
+      <div class="moment"><img src="assets/img/g4.jpg" alt="Schwarze LED-Kerzen mit Gold"><div class="cap"><b>Der Anlass</b><span>Festlich gedeckt, ganz ohne Risiko</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- Comparison -->
+<section class="section alt" id="vergleich">
+  <div class="wrap">
+    <div class="shead">
+      <p class="eyebrow c">Der ehrliche Vergleich</p>
+      <h2 class="display">Esszett LED-Kerze <em>vs.</em> echte Wachskerze</h2>
+    </div>
+    <div class="compare">
+      <div class="crow chead">
+        <div class="lead">&nbsp;</div>
+        <div class="us">
+          <span class="us-badge">Empfohlen</span>
+          <span class="clogo-chip"><img src="assets/img/logo-esszett.jpg" alt="Esszett Luxury"></span>
+          <small>LED-Kerze · PTMD</small>
+        </div>
+        <div><span class="other-h">Echte Kerze</span><small>Klassisch</small></div>
+      </div>
+      <div class="crow"><div class="lead">Warmes Flackern</div><div class="ccol us-col"><span class="yes">✓ Bewegliche 3D-Flamme</span></div><div class="ccol"><span class="yes">✓ Ja</span></div></div>
+      <div class="crow"><div class="lead">Sicher über Nacht</div><div class="ccol us-col"><span class="yes">✓ Keine offene Flamme</span></div><div class="ccol"><span class="no">✕ Brandgefahr</span></div></div>
+      <div class="crow"><div class="lead">Kein Rauch &amp; Wachs</div><div class="ccol us-col"><span class="yes">✓ Sauber</span></div><div class="ccol"><span class="no">✕ Tropft &amp; rußt</span></div></div>
+      <div class="crow"><div class="lead">Timer-Automatik</div><div class="ccol us-col"><span class="yes">✓ 6-Stunden-Timer</span></div><div class="ccol"><span class="no">✕ Nein</span></div></div>
+      <div class="crow"><div class="lead">Immer wieder nutzbar</div><div class="ccol us-col"><span class="yes">✓ Jahrelang</span></div><div class="ccol"><span class="no">✕ Brennt ab</span></div></div>
+      <div class="crow"><div class="lead">Echtwachs-Haptik</div><div class="ccol us-col"><span class="yes">✓ Echtes Wachs</span></div><div class="ccol"><span class="yes">✓ Ja</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- How to -->
+<section class="section">
+  <div class="wrap">
+    <div class="shead">
+      <p class="eyebrow c">So einfach geht's</p>
+      <h2 class="display">In <em>drei</em> Schritten zur Stimmung</h2>
+    </div>
+    <div class="steps">
+      <div class="step"><div class="n">1</div><h3>Batterien einsetzen</h3><p>Zwei AA-Batterien in das Bodenfach – fertig. Kein Kabel, keine Montage.</p></div>
+      <div class="step"><div class="n">2</div><h3>Timer aktivieren</h3><p>Einmal einschalten. Die Kerze merkt sich die Uhrzeit und geht jeden Abend von selbst an.</p></div>
+      <div class="step"><div class="n">3</div><h3>Zurücklehnen</h3><p>Warmes Flackern für 6 Stunden, dann automatisch aus. Genieße den Moment.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- Reviews -->
+<section class="section alt" id="reviews">
+  <div class="wrap">
+    <div class="shead">
+      <p class="eyebrow c">Echte Kund:innen, echte Ergebnisse</p>
+      <h2 class="display">4,65 von 5 – <em>geliebt</em> für die echte Optik</h2>
+    </div>
+    <div class="rev-top">
+      <div class="score">
+        <div class="big">4,65</div>
+        <div class="stars" style="--v:93%"><span class="fill"></span></div>
+        <div class="n">Basierend auf 57 Bewertungen</div>
+        <div class="rio"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg> Verifiziert · REVIEWS.io</div>
+      </div>
+      <div class="bars">
+        <div class="bar"><span class="lab">5 ★</span><span class="track"><span class="fill" style="width:79%"></span></span><span class="pct">79 %</span></div>
+        <div class="bar"><span class="lab">4 ★</span><span class="track"><span class="fill" style="width:14%"></span></span><span class="pct">14 %</span></div>
+        <div class="bar"><span class="lab">3 ★</span><span class="track"><span class="fill" style="width:4%"></span></span><span class="pct">4 %</span></div>
+        <div class="bar"><span class="lab">2 ★</span><span class="track"><span class="fill" style="width:2%"></span></span><span class="pct">2 %</span></div>
+        <div class="bar"><span class="lab">1 ★</span><span class="track"><span class="fill" style="width:1%"></span></span><span class="pct">1 %</span></div>
+      </div>
+    </div>
+    <div class="rev-grid">
+      <div class="rev photo">
+        <div class="ph"><img src="assets/img/g1.jpg" alt="Kundenbild der LED-Kerzen"></div>
+        <div class="top"><span class="ava">CB</span><div><div class="who">Corinna Baumann</div><div class="loc">Paderborn, DE</div></div><span class="vf"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6 9 17l-5-5"/></svg>Verifiziert</span></div>
+        <div class="stars" style="--v:100%"><span class="fill"></span></div>
+        <h4>Sieht aus wie eine echte Kerze</h4>
+        <p>Die Qualität ist einfach perfekt. Sieht fast aus wie eine echte Kerze – nur der Docht erinnert daran, dass es eine LED ist. Sogar die Hände riechen nach Wachs. Eine echte Kaufempfehlung!</p>
+        <div class="date">3. März 2026</div>
+      </div>
+      <div class="rev">
+        <div class="top"><span class="ava">OH</span><div><div class="who">Olaf Hammer</div><div class="loc">Cottbus, DE</div></div><span class="vf"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6 9 17l-5-5"/></svg>Verifiziert</span></div>
+        <div class="stars" style="--v:100%"><span class="fill"></span></div>
+        <h4>Toller Service</h4>
+        <p>Tolle Kerze und auch der Service ist hervorragend. Gerne wieder.</p>
+        <div class="date">23. Februar 2026</div>
+      </div>
+      <div class="rev">
+        <div class="top"><span class="ava">WS</span><div><div class="who">Walentin Schell</div><div class="loc">Burghausen, DE</div></div><span class="vf"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6 9 17l-5-5"/></svg>Verifiziert</span></div>
+        <div class="stars" style="--v:100%"><span class="fill"></span></div>
+        <h4>Rundum zufrieden</h4>
+        <p>Schnelle Lieferung, sichere Verpackung und die Kerze macht in echt noch mehr her als auf den Fotos. Absolut empfehlenswert.</p>
+        <div class="date">5. Januar 2026</div>
+      </div>
+      <div class="rev photo">
+        <div class="ph"><img src="assets/img/g5.jpg" alt="Weiße LED-Kerzen im Wohnzimmer"></div>
+        <div class="top"><span class="ava">SD</span><div><div class="who">Susanne Danzer</div><div class="loc">Oberkirch, DE</div></div><span class="vf"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6 9 17l-5-5"/></svg>Verifiziert</span></div>
+        <div class="stars" style="--v:90%"><span class="fill"></span></div>
+        <h4>Wunderschöne Stimmung</h4>
+        <p>Ich habe gleich mehrere in verschiedenen Größen bestellt. Auf dem Tablett arrangiert sehen sie fantastisch aus – abends einfach herrlich gemütlich.</p>
+        <div class="date">4. März 2026</div>
+      </div>
+      <div class="rev">
+        <div class="top"><span class="ava">MK</span><div><div class="who">Miriam Keller</div><div class="loc">Freiburg, DE</div></div><span class="vf"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6 9 17l-5-5"/></svg>Verifiziert</span></div>
+        <div class="stars" style="--v:100%"><span class="fill"></span></div>
+        <h4>Perfektes Geschenk</h4>
+        <p>Als Geschenk für meine Mutter gekauft – sie war begeistert. Der Timer ist genial, abends geht sie von selbst an. Kommt bestimmt noch eine Bestellung nach.</p>
+        <div class="date">18. Dezember 2025</div>
+      </div>
+      <div class="rev">
+        <div class="top"><span class="ava">TB</span><div><div class="who">Thomas Berger</div><div class="loc">Linz, AT</div></div><span class="vf"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6 9 17l-5-5"/></svg>Verifiziert</span></div>
+        <div class="stars" style="--v:80%"><span class="fill"></span></div>
+        <h4>Sehr realistisch</h4>
+        <p>Die bewegliche Flamme sieht wirklich verblüffend echt aus. Ein Stern Abzug nur, weil Batterien nicht dabei sind – ansonsten top Qualität.</p>
+        <div class="date">29. November 2025</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Video testimonials -->
+<section class="section">
+  <div class="wrap">
+    <div class="shead">
+      <p class="eyebrow c">Sieh es mit eigenen Augen</p>
+      <h2 class="display">Kunden zeigen ihre <em>Kerzen</em></h2>
+      <p class="sub">Echte Zuhause, echtes Flackern – kurze Video-Eindrücke aus dem Alltag unserer Kund:innen.</p>
+    </div>
+    <div class="vids">
+      <div class="vid" role="button" tabindex="0" aria-label="Video-Bewertung von Sandra abspielen">
+        <img src="assets/img/cust-f.jpg" alt="Kundin Sandra mit ihren LED-Kerzen">
+        <div class="ov"></div>
+        <span class="dur"><span class="rec"></span> 0:38</span>
+        <span class="play"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
+        <div class="meta">
+          <div class="stars" style="--v:100%"><span class="fill"></span></div>
+          <div class="nm">Sandra Beham</div>
+          <div class="loc">Verifizierte Käuferin · München</div>
+          <div class="q">„Meine Gäste denken jedes Mal, es sei eine echte Kerze.“</div>
+        </div>
+      </div>
+      <div class="vid" role="button" tabindex="0" aria-label="Video-Bewertung von Olaf abspielen">
+        <img src="assets/img/cust-m.jpg" alt="Kunde Olaf mit seinen LED-Kerzen">
+        <div class="ov"></div>
+        <span class="dur"><span class="rec"></span> 0:52</span>
+        <span class="play"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
+        <div class="meta">
+          <div class="stars" style="--v:100%"><span class="fill"></span></div>
+          <div class="nm">Olaf Hammer</div>
+          <div class="loc">Verifizierter Käufer · Cottbus</div>
+          <div class="q">„Kein Abbrennen, kein Ruß – abends geht sie von selbst an.“</div>
+        </div>
+      </div>
+      <div class="vid" role="button" tabindex="0" aria-label="Video-Bewertung von Bianca abspielen">
+        <img src="assets/img/g1.jpg" alt="LED-Kerzen im Zuhause von Bianca">
+        <div class="ov"></div>
+        <span class="dur"><span class="rec"></span> 0:41</span>
+        <span class="play"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
+        <div class="meta">
+          <div class="stars" style="--v:100%"><span class="fill"></span></div>
+          <div class="nm">Bianca Wichert</div>
+          <div class="loc">Verifizierte Käuferin · Hamburg</div>
+          <div class="q">„Auf dem Tablett arrangiert – einfach herrlich gemütlich.“</div>
+        </div>
+      </div>
+    </div>
+    <p class="vidnote"><b>4,65 ★</b> aus 57 Bewertungen · Video-Eindrücke echter Kund:innen</p>
+  </div>
+</section>
+
+<!-- Founders -->
+<section class="section alt" id="story">
+  <div class="wrap founders">
+    <div class="ph"><img src="assets/img/founders.jpg" alt="Zeljko und Steven Ruzic, Gründer von Esszett"></div>
+    <div>
+      <p class="eyebrow">Die Menschen hinter Esszett</p>
+      <p class="q">„Dein Zuhause verdient Möbel und Licht mit Charakter. Mit ehrlichen Preisen und echter Beratung schaffen wir Räume zum Wohlfühlen.“</p>
+      <img class="sign" src="assets/img/steve-sign.png" alt="Unterschrift Steven Ruzic">
+      <div class="role">Zeljko &amp; Steven Ruzic · Vater, Sohn &amp; Gründer von Esszett Luxury</div>
+      <p class="body">Wir glauben: Wahre Gemütlichkeit muss nicht auf Kosten der Umwelt gehen. Deshalb setzen wir auf langlebige Qualität statt Wegwerfmentalität – und sind auch persönlich in unserem Showroom für dich da.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Kit -->
+<section class="section">
+  <div class="wrap">
+    <div class="shead">
+      <p class="eyebrow c">Das bekommst du</p>
+      <h2 class="display">Sorgfältig verpackt, sofort <em>einsatzbereit</em></h2>
+    </div>
+    <div class="kit">
+      <div class="fig">
+        <img src="assets/img/g13.jpg" alt="LED-Kerze S Produktansicht">
+        <span class="tag"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg> Alles dabei, sofort startklar</span>
+      </div>
+      <ul class="kitlist">
+        <li>
+          <span class="k"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 2.5c-2.4 2.6-2.4 4.7 0 6.8 2.4-2.1 2.4-4.2 0-6.8Z" fill="currentColor" stroke="none"/><rect x="7.5" y="9.5" width="9" height="12" rx="1.6"/><path d="M12 9.5v2.4"/></svg></span>
+          <div><b>1× PTMD LED-Kerze S</b><span>Echtwachs, 7,5 × 10 cm, mit vorprogrammierter 3D-Flamme und 6-Stunden-Timer.</span></div>
+        </li>
+        <li>
+          <span class="k"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M4 5.5A2 2 0 0 1 6 4h5v15H6a2 2 0 0 0-2 1.5Z"/><path d="M20 5.5A2 2 0 0 0 18 4h-5v15h5a2 2 0 0 1 2 1.5Z"/><path d="M7.5 8h2M7.5 11h2M14.5 8h2M14.5 11h2"/></svg></span>
+          <div><b>Verständliche Kurzanleitung</b><span>In 30 Sekunden eingerichtet – Timer und Intensität ganz einfach erklärt.</span></div>
+        </li>
+        <li>
+          <span class="k"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 2.6 4.5 5.4v5.7c0 4.6 3.2 7.4 7.5 8.9 4.3-1.5 7.5-4.3 7.5-8.9V5.4Z"/><path d="m9 12 2.2 2.2L15.5 10"/></svg></span>
+          <div><b>Geprüfte Qualitätskontrolle</b><span>Jede Kerze wird vor dem Versand auf Flamme, Timer und Oberfläche geprüft.</span></div>
+        </li>
+        <li>
+          <span class="k"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M4 11.5a8 8 0 0 1 16 0v4a3 3 0 0 1-3 3h-2"/><rect x="3" y="11" width="3.5" height="6" rx="1.6"/><rect x="17.5" y="11" width="3.5" height="6" rx="1.6"/><path d="M15 18.5a2 2 0 0 1-2 1.5h-1"/></svg></span>
+          <div><b>Persönlicher Support</b><span>Fragen nach dem Kauf? Wir sind per WhatsApp und im Showroom für dich da.</span></div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section alt">
+  <div class="wrap">
+    <div class="shead"><p class="eyebrow c">Gut zu wissen</p><h2 class="display">Häufige <em>Fragen</em></h2></div>
+    <div class="faq">
+      <details open><summary>Wie oft muss ich die Batterien wechseln?<span class="pm">+</span></summary><div class="body">Bei täglicher Nutzung mit aktiviertem Timer (4–6 Stunden) halten hochwertige AA-Batterien etwa 150–200 Stunden – ungefähr 4–6 Wochen. Ein schwächer werdendes Flackern signalisiert den Wechsel. Für lange Laufzeit empfehlen wir Lithium-Batterien.</div></details>
+      <details><summary>Kann ich die LED-Kerze über Nacht brennen lassen?<span class="pm">+</span></summary><div class="body">Ja. Da keine offene Flamme entsteht, kannst du die Kerze bedenkenlos über Nacht leuchten lassen. Der 6-Stunden-Timer schaltet sie ohnehin automatisch ab.</div></details>
+      <details><summary>Wie authentisch wirkt die Echtwachs-Kerze?<span class="pm">+</span></summary><div class="body">Der Korpus besteht aus echtem Wachs mit rustikaler Oberfläche und fühlt sich an wie eine klassische Stumpenkerze. In Kombination mit der beweglichen Flamme ist sie von einer echten Kerze kaum zu unterscheiden.</div></details>
+      <details><summary>Welche Größen und Farben gibt es?<span class="pm">+</span></summary><div class="body">Die LED-Kerze gibt es in den Größen XS bis XXL sowie als Stabkerze, in über einem Dutzend Farben – von Weiß und Schwarz über Bordeaux und Petrol bis Gold. So findest du für jeden Raum den passenden Ton.</div></details>
+      <details><summary>Kann ich auf Rechnung kaufen?<span class="pm">+</span></summary><div class="body">Ja – bezahle bequem und sicher auf Rechnung mit Klarna oder über PayPal. Dein Einkauf ist durch Käuferschutz abgesichert.</div></details>
+      <details><summary>Wie schnell ist die Lieferung?<span class="pm">+</span></summary><div class="body">Versandfertig in 1–2 Werktagen, Lieferung innerhalb Deutschlands meist in 2–4 Werktagen mit DHL, DPD oder GLS. Ab 150&nbsp;€ Bestellwert versenden wir kostenlos.</div></details>
+    </div>
+  </div>
+</section>
+
+<!-- Final CTA -->
+<section class="section dark cta-photo" style="background-image:url('assets/img/g4.jpg')">
+  <div class="wrap finalcta">
+    <p class="eyebrow c">Bereit für warmes Licht?</p>
+    <h2 class="display">Hol dir das Flackern <em>nach Hause</em></h2>
+    <div class="price"><span class="now">10,30&nbsp;€</span><span class="was">11,90&nbsp;€</span><span class="save">−13&nbsp;%</span></div>
+    <p class="sub" style="color:#C9BCA6;max-width:52ch;margin:14px auto 0">Sicher, stimmungsvoll und immer wieder verwendbar. Mit 14 Tagen Rückgaberecht und geprüftem Käuferschutz.</p>
+    <a href="#top" class="cta-btn" id="ctaScroll">
+      <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.7 13.4a2 2 0 0 0 2 1.6h9.7a2 2 0 0 0 2-1.6L23 6H6"/></svg>
+      Jetzt sichern
+    </a>
+    <p class="mini">✓ Sicher zahlen mit PayPal &amp; Klarna &nbsp;·&nbsp; ✓ Gratis Versand ab 150&nbsp;€ &nbsp;·&nbsp; ✓ <b>Über 10.000 zufriedene Kunden</b></p>
+  </div>
+</section>
+
+<!-- Shipping & payment strip -->
+<div class="trust-strip">
+  <div class="wrap">
+    <div class="tcol ship">
+      <div class="h">Versand mit</div>
+      <div class="logo-chips">
+        <span class="chipimg"><img src="assets/ship/dhl.png" alt="DHL"></span>
+        <span class="chipimg"><img src="assets/ship/dpd.png" alt="DPD"></span>
+        <span class="chipimg"><img src="assets/ship/gls.svg" alt="GLS"></span>
+        <span class="chipimg"><img src="assets/ship/emons.jpg" alt="Emons"></span>
+        <span class="chipimg"><img src="assets/ship/dachser.svg" alt="Dachser"></span>
+      </div>
+    </div>
+    <div class="vr"></div>
+    <div class="tcol paycol">
+      <div class="h">Sicher bezahlen</div>
+      <div class="logo-chips">
+        <span class="pay pp" title="PayPal"><span class="a">Pay</span><span class="b">Pal</span></span>
+        <span class="pay klarna" title="Klarna">Klarna</span>
+        <span class="pay visa" title="Visa">VISA</span>
+        <span class="pay mc" title="Mastercard"><i></i><i></i></span>
+        <span class="pay amex" title="American Express">AMEX</span>
+        <span class="pay apay" title="Apple Pay"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17 12.5c0-2 1.6-3 1.7-3.1-1-1.4-2.4-1.6-2.9-1.6-1.2-.1-2.4.7-3 .7s-1.6-.7-2.6-.7c-1.3 0-2.6.8-3.2 2-1.4 2.4-.4 6 1 8 .7 1 1.4 2 2.5 2 1 0 1.3-.6 2.5-.6s1.5.6 2.5.6 1.7-1 2.4-2c.5-.7.7-1.1 1-1.9-2.6-1-3-3.4-2.9-3.9ZM15 6.3c.5-.7.9-1.6.8-2.5-.8 0-1.7.5-2.3 1.2-.5.6-.9 1.5-.8 2.4.9.1 1.8-.4 2.3-1.1Z"/></svg>Pay</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="foot-news">
+      <div class="nl-txt">
+        <h3>Bleib inspiriert</h3>
+        <p>Wohnideen, Neuheiten &amp; exklusive Angebote – direkt in dein Postfach. Kein Spam, jederzeit abbestellbar.</p>
+      </div>
+      <form class="news-form" id="newsForm">
+        <input type="email" required placeholder="Deine E-Mail-Adresse" aria-label="E-Mail-Adresse">
+        <button type="submit">Anmelden</button>
+      </form>
+    </div>
+    <div class="cols">
+      <div class="brand-col">
+        <img class="flogo" src="assets/img/logo-esszett.jpg" alt="Esszett Luxury">
+        <p>Stilvolles Wohnen mit Charakter. Möbel, Leuchten und Wohnaccessoires – handverlesen von Zeljko &amp; Steven Ruzic.</p>
+        <ul class="foot-contact">
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 6h16v12H4z"/><path d="m4 7 8 6 8-6"/></svg> <a href="mailto:office@esszett.eu">office@esszett.eu</a></li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L20 13l2 5v4a1 1 0 0 1-1 1A17 17 0 0 1 4 7a1 1 0 0 1 1-3Z"/></svg> <a href="tel:+49301234567">+49 30 123 456 7</a></li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s7-6.3 7-11a7 7 0 0 0-14 0c0 4.7 7 11 7 11Z"/><circle cx="12" cy="10" r="2.5"/></svg> Showroom · Berlin, DE</li>
+        </ul>
+        <div class="socials">
+          <a href="#" aria-label="Facebook"><svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M14 9h3V6h-3c-2.2 0-4 1.8-4 4v2H7v3h3v7h3v-7h3l1-3h-4v-2c0-.6.4-1 1-1Z"/></svg></a>
+          <a href="#" aria-label="Instagram"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+          <a href="#" aria-label="Pinterest"><svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-3.6 19.3c-.1-.8-.1-2 .1-2.9l1.1-4.8s-.3-.6-.3-1.4c0-1.3.8-2.3 1.7-2.3.8 0 1.2.6 1.2 1.3 0 .8-.5 2-.8 3.2-.2.9.5 1.6 1.4 1.6 1.7 0 2.9-2.2 2.9-4.7 0-1.9-1.3-3.4-3.7-3.4A4.2 4.2 0 0 0 8 12.4c0 .8.3 1.4.6 1.8.1.2.2.3.1.5l-.2.9c-.1.3-.2.4-.5.2-1.2-.5-1.8-2-1.8-3.4C6.2 9 8.1 6.4 12 6.4c3.1 0 5.2 2.3 5.2 4.7 0 3.2-1.8 5.6-4.4 5.6-.9 0-1.7-.5-2-1l-.6 2.2c-.2.7-.6 1.5-.9 2A10 10 0 1 0 12 2Z"/></svg></a>
+        </div>
+      </div>
+      <div><h4>Shop</h4><ul><li><a href="#">LED-Kerzen</a></li><li><a href="#">Beleuchtung</a></li><li><a href="#">Wohnaccessoires</a></li><li><a href="#">Neuheiten</a></li></ul></div>
+      <div><h4>Kundenservice</h4><ul><li><a href="#">Versand &amp; Lieferung</a></li><li><a href="#">Rückgabe &amp; Retoure</a></li><li><a href="#">WhatsApp-Beratung</a></li><li><a href="#">Kontakt</a></li></ul></div>
+      <div><h4>Rechtliches</h4><ul><li><a href="#">Impressum</a></li><li><a href="#">Datenschutz</a></li><li><a href="#">AGB</a></li><li><a href="#">Widerrufsrecht</a></li></ul></div>
+    </div>
+    <div class="foot-pay">
+      <div class="pays">
+        <span class="pay pp" title="PayPal"><span class="a">Pay</span><span class="b">Pal</span></span>
+        <span class="pay klarna" title="Klarna">Klarna</span>
+        <span class="pay visa" title="Visa">VISA</span>
+        <span class="pay mc" title="Mastercard"><i></i><i></i></span>
+        <span class="pay amex" title="American Express">AMEX</span>
+        <span class="pay apay" title="Apple Pay"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17 12.5c0-2 1.6-3 1.7-3.1-1-1.4-2.4-1.6-2.9-1.6-1.2-.1-2.4.7-3 .7s-1.6-.7-2.6-.7c-1.3 0-2.6.8-3.2 2-1.4 2.4-.4 6 1 8 .7 1 1.4 2 2.5 2 1 0 1.3-.6 2.5-.6s1.5.6 2.5.6 1.7-1 2.4-2c.5-.7.7-1.1 1-1.9-2.6-1-3-3.4-2.9-3.9ZM15 6.3c.5-.7.9-1.6.8-2.5-.8 0-1.7.5-2.3 1.2-.5.6-.9 1.5-.8 2.4.9.1 1.8-.4 2.3-1.1Z"/></svg>Pay</span>
+      </div>
+      <div class="trust"><span class="st">★★★★★</span> <b>4,65</b> · über 10.000 zufriedene Kunden</div>
+    </div>
+    <div class="bottom">
+      <span>© 2026 Esszett Luxury · Alle Preise inkl. MwSt., zzgl. Versand</span>
+      <span class="legal"><a href="#">Impressum</a><a href="#">Datenschutz</a><a href="#">AGB</a><a href="#">Cookie-Einstellungen</a></span>
+    </div>
+  </div>
+</footer>
+
+<!-- Sticky mobile -->
+<div class="stickybar" id="stickybar">
+  <div class="info"><div class="nm">LED-Kerze S · 3er-Set</div><div class="pr"><b id="stickyPrice">27,60&nbsp;€</b> <span style="text-decoration:line-through;opacity:.6">35,70&nbsp;€</span></div></div>
+  <button class="add" id="stickyAdd">In den Warenkorb</button>
+</div>
+
+<div class="toast" id="toast"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg> <span>Zum Warenkorb hinzugefügt</span></div>
+
+<script src="script.js"></script>
+</body>
+</html>
