@@ -167,6 +167,24 @@
     reveals.forEach(function (r) { ro.observe(r); });
   } else { reveals.forEach(function (r) { r.classList.add('in'); }); }
 
+  /* ---- Stock bar fills into view ---- */
+  var stock = $('#stock');
+  if (stock) {
+    var sbar = $('.stock-bar span', stock);
+    if (sbar) {
+      var target = sbar.style.width || '20%';
+      sbar.style.width = '0%';
+      var filled = false;
+      var fill = function () { if (filled) return; filled = true; requestAnimationFrame(function () { sbar.style.width = target; }); };
+      if ('IntersectionObserver' in window) {
+        new IntersectionObserver(function (es, o) {
+          es.forEach(function (en) { if (en.isIntersecting) { fill(); o.unobserve(en.target); } });
+        }, { threshold: 0.4 }).observe(stock);
+        setTimeout(fill, 2000); /* fallback so the bar never stays empty */
+      } else { fill(); }
+    }
+  }
+
   /* ---- Animated stat rings ---- */
   var stats = $('#stats');
   if (stats && 'IntersectionObserver' in window) {
