@@ -114,6 +114,14 @@
   }
   ['#addCart', '#stickyAdd', '#paypalBtn'].forEach(function (id) { var el = $(id); if (el) el.addEventListener('click', bumpCart); });
 
+  /* ---- Frequently-bought-together add buttons ---- */
+  $$('.fbt-add').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      if (cartCount) cartCount.textContent = String((parseInt(cartCount.textContent, 10) || 0) + 1);
+      pop();
+    });
+  });
+
   /* ---- Newsletter form ---- */
   var news = $('#newsForm');
   if (news) news.addEventListener('submit', function (e) {

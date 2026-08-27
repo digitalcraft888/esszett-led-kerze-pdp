@@ -281,10 +281,10 @@ h1,h2,h3,h4{margin:0;line-height:1.12;font-weight:600}
 .press{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--card)}
 .press .wrap{display:flex;align-items:center;justify-content:center;gap:40px;flex-wrap:wrap;padding:22px 24px}
 .press .label{font-size:.72rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-3)}
-.press .brands{display:flex;align-items:center;gap:26px;flex-wrap:wrap;justify-content:center}
-.press .brands img{height:64px;width:auto;filter:grayscale(1);opacity:.8;transition:.2s}
+.press .brands{display:flex;align-items:center;gap:30px;flex-wrap:wrap;justify-content:center}
+.press .brands img{height:92px;width:auto;filter:grayscale(1);opacity:.82;transition:.2s}
 .press .brands img:hover{filter:grayscale(0);opacity:1}
-@media(max-width:640px){.press .wrap{gap:16px}.press .brands{gap:14px}.press .brands img{height:52px}}
+@media(max-width:640px){.press .wrap{gap:16px}.press .brands{gap:16px}.press .brands img{height:68px}}
 
 /* ---------- Section shell ----------------------------------------------- */
 .section{padding:108px 0}
@@ -302,6 +302,34 @@ h1,h2,h3,h4{margin:0;line-height:1.12;font-weight:600}
 .shead{text-align:center;max-width:740px;margin:0 auto 64px}
 .shead p.sub{color:var(--ink-2);font-size:1.12rem;margin:20px 0 0}
 .section.dark .shead p.sub{color:#C9BCA6}
+
+/* ---------- Frequently bought together ---------------------------------- */
+.fbt-sec{padding:88px 0}
+.fbt-head{font-family:var(--serif);font-weight:800;font-size:clamp(1.7rem,3vw,2.3rem);letter-spacing:-.02em;margin:0 0 34px}
+.fbt-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+.fbt-card{background:#fff;border:1px solid var(--line);border-radius:14px;overflow:hidden;display:flex;flex-direction:column;transition:.2s}
+.fbt-card:hover{box-shadow:var(--shadow-lg);border-color:var(--line-2);transform:translateY(-3px)}
+.fbt-media{position:relative;background:#F4F2EE;aspect-ratio:1/1;display:grid;place-items:center;padding:26px}
+.fbt-media img{max-width:100%;max-height:100%;width:auto;height:auto;object-fit:contain;mix-blend-mode:multiply}
+.fbt-save{position:absolute;top:0;left:0;background:#141310;color:#fff;font-size:.82rem;font-weight:600;padding:8px 13px;letter-spacing:.01em}
+.fbt-add{position:absolute;bottom:14px;right:14px;width:46px;height:46px;border-radius:11px;background:var(--red);color:#fff;
+  border:none;display:grid;place-items:center;box-shadow:0 10px 22px -10px rgba(216,40,46,.6);transition:.16s}
+.fbt-add:hover{background:var(--red-2);transform:translateY(-1px)}
+.fbt-body{padding:18px 18px 20px;display:flex;flex-direction:column;flex:1}
+.fbt-title{font-weight:700;font-size:.95rem;line-height:1.4;color:var(--ink);margin:0;min-height:3.9em}
+.fbt-price{margin:14px 0 0;font-size:1.12rem;font-weight:800;color:var(--ink);display:flex;align-items:baseline;gap:8px;flex-wrap:wrap}
+.fbt-price .pre{font-size:.82rem;font-weight:600;color:var(--ink-2)}
+.fbt-price .old{color:var(--red);text-decoration:line-through;font-weight:700;font-size:.98rem}
+.fbt-stock{margin:12px 0 0;font-size:.84rem;color:var(--ink-2);display:flex;align-items:center;gap:9px}
+.fbt-stock .d{width:8px;height:8px;border-radius:50%;background:var(--sage);flex:none}
+@media(max-width:900px){.fbt-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:560px){
+  .fbt-grid{display:flex;overflow-x:auto;gap:14px;scroll-snap-type:x mandatory;
+    margin:0 -18px;padding:2px 18px 12px;scrollbar-width:none}
+  .fbt-grid::-webkit-scrollbar{display:none}
+  .fbt-card{flex:0 0 76%;scroll-snap-align:start}
+  .fbt-title{min-height:0}
+}
 
 /* ---------- Guarantee trio ---------------------------------------------- */
 .trio{display:grid;grid-template-columns:repeat(3,1fr);gap:0}
@@ -372,12 +400,12 @@ h1,h2,h3,h4{margin:0;line-height:1.12;font-weight:600}
 .crow:not(.chead):hover .lead{color:var(--gold-2)}
 /* header row — distinct from cream section + white body */
 .chead{background:linear-gradient(180deg,#fff,var(--paper))}
-.chead>div{justify-content:flex-end;text-align:center;flex-direction:column;gap:7px;padding:22px 16px 16px;position:relative}
+.chead>div{display:flex;flex-direction:column;align-items:center;justify-content:flex-end;text-align:center;gap:9px;padding:18px 14px 16px;position:relative}
 .chead .clogo-chip{background:#fff;border:1px solid var(--line);border-radius:9px;padding:7px 11px;display:inline-flex;box-shadow:0 6px 16px -12px rgba(23,23,23,.4)}
 .chead .clogo-chip img{height:22px;width:auto;display:block}
 .chead .other-h{font-family:var(--serif);font-size:1.3rem;font-weight:800;color:var(--ink);line-height:1.05}
 .chead small{font-family:var(--sans);font-size:.62rem;letter-spacing:.13em;text-transform:uppercase;color:var(--ink-3);font-weight:700}
-.us-badge{position:absolute;top:9px;left:50%;transform:translateX(-50%);background:var(--gold);color:#fff;font-size:.56rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;padding:4px 11px;border-radius:999px;box-shadow:0 6px 14px -6px rgba(180,144,47,.7);white-space:nowrap}
+.us-badge{order:-1;align-self:center;background:var(--gold);color:#fff;font-size:.58rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;padding:5px 13px;border-radius:999px;box-shadow:0 5px 13px -5px rgba(180,144,47,.65);white-space:nowrap;line-height:1}
 .ccol{justify-content:center;text-align:center;flex-direction:column;gap:3px;font-size:.88rem}
 .ccol .yes{color:var(--sage);font-weight:700}
 .ccol .no{color:var(--ink-3)}
@@ -386,7 +414,7 @@ h1,h2,h3,h4{margin:0;line-height:1.12;font-weight:600}
   box-shadow:inset 1px 0 0 rgba(180,144,47,.28),inset -1px 0 0 rgba(180,144,47,.28)}
 .chead .us{background:linear-gradient(180deg,rgba(180,144,47,.15),rgba(180,144,47,.07));
   box-shadow:inset 1px 0 0 rgba(180,144,47,.3),inset -1px 0 0 rgba(180,144,47,.3),inset 0 3px 0 var(--gold)}
-@media(max-width:620px){.crow>div{padding:12px 9px;font-size:.78rem}.chead .other-h{font-size:1rem}.chead .clogo-chip{padding:5px 7px}.chead .clogo-chip img{height:15px}.ccol{font-size:.72rem}.us-badge{font-size:.48rem;padding:3px 7px}}
+@media(max-width:620px){.crow>div{padding:12px 9px;font-size:.78rem}.chead>div{padding:14px 8px 12px;gap:7px}.chead .other-h{font-size:1rem}.chead .clogo-chip{padding:5px 8px}.chead .clogo-chip img{height:15px}.ccol{font-size:.72rem}.us-badge{font-size:.5rem;padding:4px 9px;letter-spacing:.08em}}
 
 /* ---------- How to (3 steps) -------------------------------------------- */
 .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
