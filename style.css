@@ -201,12 +201,13 @@ h1,h2,h3,h4{margin:0;line-height:1.12;font-weight:600}
 
 /* Real PayPal express button */
 .paypal-btn{width:100%;border:none;border-radius:13px;background:var(--pp-yellow);color:#003087;
-  padding:14px;font-weight:600;font-size:1rem;display:flex;align-items:center;justify-content:center;gap:8px;
+  padding:14px;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-weight:500;font-size:1.02rem;
+  display:flex;align-items:center;justify-content:center;gap:7px;
   box-shadow:0 10px 24px -14px rgba(0,0,0,.35);transition:.16s;cursor:pointer}
 .paypal-btn:hover{background:var(--pp-yellow-2)}
-.paypal-btn .pp{font-style:italic;font-weight:800;font-size:1.12rem;letter-spacing:-.01em;display:inline-flex}
+.paypal-btn .pp{font-style:italic;font-weight:700;font-size:1.14rem;letter-spacing:-.02em;display:inline-flex}
 .paypal-btn .pp .a{color:#003087}.paypal-btn .pp .b{color:#009CDE}
-.paypal-btn .txt{color:#2C2E2F;font-weight:600}
+.paypal-btn .txt{color:#003087;font-weight:500}
 .pp-alt{text-align:center;margin-top:8px;font-size:.76rem;color:var(--ink-3)}
 
 .reassure{list-style:none;padding:0;margin:20px 0 0;display:flex;flex-direction:column;gap:10px}
